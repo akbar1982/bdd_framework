@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="cucumber" verbose="1">
+
+    <listeners>
+        <listener class-name="runners.TestNgListener" />
+    </listeners>
+
+    <test name="hotels">
+        <parameter name="myName"  value="true"/>
+        <classes>
+            <class name="runners.TestRunner"> </class>
+            <class name="stepdefinition.LandingPageTests"> </class>
+            <class name="stepdefinition.TestHooker"> </class>
+            <class name="runners.TestNgListener"> </class>
+        </classes>
+    </test>
+</suite>
